@@ -1,34 +1,45 @@
-'use strict';
+require('dotenv').config();
 
-var express = require('express');
-var routes = require('./app/routes/index.js');
-var mongoose = require('mongoose');
-var passport = require('passport');
-var session = require('express-session');
+require('babel-register')({
+	presets: ['env', 'react', 'stage-0']
+});
 
-var app = express();
-require('dotenv').load();
-require('./app/config/passport')(passport);
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const express = require('express');
+const favicon = require('serve-favicon');
+const flash = require('connect-flash');
+const logger = require('morgan');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const path = require('path');
+const session = require('express-session');
 
-mongoose.connect(process.env.MONGO_URI);
-mongoose.Promise = global.Promise;
+const app = express();
 
-app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
-app.use('/public', express.static(process.cwd() + '/public'));
-app.use('/common', express.static(process.cwd() + '/app/common'));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
-app.use(session({
-	secret: 'secretClementine',
-	resave: false,
-	saveUninitialized: true
-}));
+mongoose.connect(process.env.MONGO_URI, {useMongoClient: true});
+mongoose.Promise = require('bluebird').Promise;
 
+// twitter oauth 2.0 requires sessions
+app.use(session({secret: process.env.JWT_SECRET, resave: false, saveUninitialized: true}));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(favicon(path.join(__dirname, 'public', 'favicon_c9.ico')));
+app.use(express.static(path.resolve(__dirname, 'universal-app')));
 
-routes(app, passport);
+// application routes
+app.use(require('./universal-app/server/routes/userRoutes.js'));
+app.use(require('./universal-app/server/routes/pinRoutes.js'));
+app.use(require('./universal-app/server/routes/indexRoute.jsx'));
 
-var port = process.env.PORT || 8080;
-app.listen(port,  function () {
-	console.log('Node.js listening on port ' + port + '...');
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+	console.log(`Node.js listening on port ${port} ...`);
 });

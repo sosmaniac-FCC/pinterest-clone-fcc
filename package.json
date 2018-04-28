@@ -1,34 +1,63 @@
 {
-  "name": "clementinejs-fcc",
-  "version": "1.0.1",
-  "description": "The elegant and lightweight boilerplate for full stack JavaScript.",
+  "name": "nature-theme-pinterest-clone",
+  "version": "1.0.0",
+  "description": "Nature + Pinterest = Naturalist.",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs-fcc"
+    "url": ""
   },
-  "homepage": "http://www.clementinejs.com/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs-fcc/issues",
-  "keywords": [
-    "MongoDB",
-    "Mongoose",
-    "full stack",
-    "Express",
-    "Node",
-    "javascript",
-    "boilerplate"
-  ],
+  "homepage": "https://nature-theme-pinterest-clone-sosmaniac.c9users.io",
+  "license": "ISC",
   "scripts": {
-  "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
-  "author": "Blake Johnston",
-  "license": "MIT",
+  "author": "John Simmons",
   "dependencies": {
-    "dotenv": "^1.2.0",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
     "express": "^4.12.4",
-    "express-session": "^1.11.3",
-    "mongoose": "^4.1.0",
-    "passport": "^0.3.0",
-    "passport-github": "^1.0.0"
+    "express-session": "^1.15.6",
+    "imagesloaded": "^4.1.4",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^4.13.12",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "serialize-javascript": "^1.4.0",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "glob": "^7.1.2",
+    "nodemon": "^1.17.2",
+    "postcss-loader": "^2.1.3",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   }
 }

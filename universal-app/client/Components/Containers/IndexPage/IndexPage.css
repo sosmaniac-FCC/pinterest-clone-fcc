@@ -1,0 +1,129 @@
+/* IndexPage */
+
+@keyframes fade-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#IndexPage .sub-grid {
+    display: grid;
+    grid-template: auto auto / repeat(12, 1fr);
+    grid-gap: 2px
+}
+
+#IndexPage main {
+    position: relative;
+    background: #efefef;
+    margin-bottom: 5px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+#IndexPage main figcaption {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana;
+    letter-spacing: 0.1em;
+    z-index: 0;
+}
+
+#IndexPage #index-image-scroll {
+    transition: opacity 750ms ease-in-out;
+    display: block;
+    margin: auto;
+    height: 500px;
+    max-width: 1000px;
+    opacity: 0;
+    animation: fade-appear 750ms ease-in-out;
+    animation-fill-mode: towards;
+    position: relative;
+    z-index: 1;
+}
+
+#IndexPage .sub-grid > .grid-item-a {
+    width: 100%;
+    grid-column: 1 / 7;
+}
+
+#IndexPage .sub-grid > .grid-item-b {
+    width: 100%;
+    grid-column: 7 / 13;
+}
+
+#IndexPage .sub-grid > .grid-item-ab {
+    width: 100%;
+    grid-column: 1 / 13;
+}
+
+#IndexPage .info-main {
+    background: linear-gradient(#fff, #a6a6a6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    outline: 1px solid #b7b7b7;
+}
+
+#IndexPage .info-main h3 {
+    font-size: 75px;
+    margin: 10px 25px;
+}
+
+#IndexPage .info-main p {
+    text-align: center;
+    font-family: Verdana;
+    padding: 0 25px 25px 25px;
+    line-height: 1.5em;
+}
+
+#IndexPage .info-spread {
+    background: #b6b6b6;
+    padding: 10px 0;
+}
+
+#IndexPage .info-spread .spread-header {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+#IndexPage .info-footer {
+    display: flex;
+    justify-content: center;
+    background-color: #a6a6a6;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #000;
+    margin-top: 2px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #IndexPage #index-image-scroll {
+        height: 375px;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #IndexPage #index-image-scroll { 
+        height: 250px;
+    }
+    
+    #IndexPage .sub-grid > .grid-item-a {
+        background: #e6e6e6;
+        grid-column: 1 / 13;
+    }
+    
+    #IndexPage .sub-grid > .grid-item-b {
+        background: linear-gradient(#e6e6e6, #a6a6a6);
+        grid-column: 1 / 13;
+    }
+}

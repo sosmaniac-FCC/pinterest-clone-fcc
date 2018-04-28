@@ -1,0 +1,133 @@
+/* CreateAccount */
+
+#CreateAccount {
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(10, 1fr);
+    grid-gap: 5px;
+}
+
+#CreateAccount aside:nth-of-type(1) {
+    background: #ebebeb;
+    border-radius: 0 0 0 5px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    grid-column: 1 / 4;
+}
+
+#CreateAccount aside:nth-of-type(2) {
+    background: #ebebeb;
+    border-radius: 0 0 5px 0;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 8 / 11;
+}
+
+#CreateAccount main {
+    background: #ebebeb;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    justify-content: center;
+    grid-column: 4 / 8;
+}
+
+#CreateAccount h1 {
+    text-align: center;
+}
+
+#CreateAccount #account-username-error[for="account-username"], 
+#CreateAccount #account-password-error[for="account-password"],
+#CreateAccount #account-email-error[for="account-email"],
+#CreateAccount #confirm-account-password-error[for="confirm-account-password"] {
+    color: red;
+    position: absolute;
+    pointer-events: none;
+    font-size: 10px;
+    right: 5%;
+    top: 1px;
+}
+
+#CreateAccount .form-row {
+    justify-content: space-between;
+}
+
+#CreateAccount .btn-block {
+    padding-top: 20px;
+}
+
+#CreateAccount .btn-block .btn-danger {
+    background: #f69;
+}
+
+#CreateAccount .btn-block .btn-danger a:hover {
+    color: #fff;
+}
+
+#CreateAccount .form-row {
+    padding: 15px 5px;
+}
+
+#CreateAccount .form-row:nth-of-type(2), #CreateAccount .form-row:nth-of-type(3) {
+    border-radius: 0;
+}
+
+#CreateAccount .form-row:nth-of-type(1) {
+    border-radius: 3px 3px 0 0;
+}
+
+#CreateAccount .form-row:nth-of-type(4) {
+    border-radius: 0 0 3px 3px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #CreateAccount aside:nth-of-type(1) {
+        grid-column: 1 / 3;
+    }
+    
+    #CreateAccount aside:nth-of-type(2) {
+        grid-column: 9 / 11;
+    }
+    
+    #CreateAccount main {
+        grid-column: 3 / 9;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #CreateAccount aside:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+    
+    #CreateAccount aside:nth-of-type(2) {
+        grid-column: 10 / 11;
+    }
+    
+    #CreateAccount main {
+        grid-column: 2 / 10;
+    }
+    
+    #CreateAccount #account-username-error[for="account-username"], 
+    #CreateAccount #account-password-error[for="account-password"],
+    #CreateAccount #account-email-error[for="account-email"],
+    #CreateAccount #confirm-account-password-error[for="confirm-account-password"] {
+        font-size: 12px;
+        top: 18px;
+        right: -55%;
+    }
+    
+    #CreateAccount .form-row {
+        width: auto;
+        flex-wrap: wrap;
+    }
+    
+    #CreateAccount form input {
+        height: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    #CreateAccount form label {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

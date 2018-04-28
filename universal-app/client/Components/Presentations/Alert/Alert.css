@@ -1,0 +1,14 @@
+/* Alert */
+
+#Alert {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* bookmark */
+#Alert main {
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+}

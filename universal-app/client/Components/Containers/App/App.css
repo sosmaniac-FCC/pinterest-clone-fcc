@@ -1,0 +1,146 @@
+/* App Component */
+
+body {
+    background: #fff;
+}
+
+button a {
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.add-btn-padding {
+      padding: 5px 10px;
+}
+  
+.rm-btn-padding {
+      padding: 0 !important;
+}
+
+.btn-danger {
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #f00;
+    background: transparent;
+}
+
+.btn-danger:hover {
+    background: #f00;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.btn-success {
+    background: #cfc;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #0f0;
+}
+
+.btn-success:hover {
+    background: #0f0;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #39f;
+    background: #9cf;
+}
+
+.btn-primary:hover {
+    background: #cce5ff;
+    color: #000 !important;
+    cursor: pointer;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.notification-danger {
+    background: #c00;
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.notification-success {
+    background: #3c3;
+    border-radius: 3px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.icon-delete {
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-delete:hover {
+    color: #f00;
+}
+
+.icon-primary {
+    color: #800000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-twitter {
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-twitter:hover {
+    color: #739cfe;
+}
+
+.icon-primary:hover {
+    color: #f00;
+}
+
+.form-row {
+    position: relative;
+    background: #b6b6b6;
+    border-radius: 3px;
+    border: 1px solid #000;
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f1f1f1;
+    min-width: 160px;
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#App > h6 {
+    display: flex;
+    justify-content: center;
+}

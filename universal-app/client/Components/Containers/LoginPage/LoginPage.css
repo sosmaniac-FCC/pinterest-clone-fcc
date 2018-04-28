@@ -1,0 +1,71 @@
+/* LoginPage */
+
+#LoginPage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #ebebeb;
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 25px;
+}
+
+#LoginPage form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#LoginPage aside i {
+    font-size: 150px;
+}
+
+#LoginPage .valid {
+    color: green;
+}
+
+/* .invalid omitted */
+
+#LoginPage #login-username-error[for="login-username"], #LoginPage #login-password-error[for="login-password"] {
+    color: red;
+    position: absolute;
+    right: 7.5%;
+}
+
+#LoginPage .form-row {
+    padding: 10px 0;
+}
+
+#LoginPage form a {
+    padding-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+#LoginPage form a:hover {
+    text-decoration: underline;
+    color: #4646e4;
+}
+
+#LoginPage form button[type="submit"] {
+    display: block;
+    margin: auto;
+}
+
+
+#LoginPage form button[type="button"] {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #LoginPage aside i {
+         font-size: 75px;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #LoginPage aside i {
+         display: none;   
+    }
+}

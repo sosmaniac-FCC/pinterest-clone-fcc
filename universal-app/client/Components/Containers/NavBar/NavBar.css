@@ -1,0 +1,97 @@
+/* NavBar */
+
+#NavBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid #000;
+    margin-bottom: 4px;
+    background: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 0;
+}
+
+#NavBar nav {
+    display: none;
+}
+
+#NavBar ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+}
+
+#NavBar li {
+    color: #000;
+    padding: 8px;
+    display: inline;
+    text-decoration: none;
+}
+
+#NavBar #app-title {
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    margin: 0;
+}
+
+#NavBar li a {
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #000;
+    background: #ccc;
+    cursor: pointer;
+}
+
+#NavBar li a:hover, .active-nav-option {
+    background-color: #555 !important;
+    color: #fff !important;
+}
+
+#NavBar .dropdown {
+    padding-left: 20px;
+    display: none;
+}
+
+#NavBar .dropdown mark {
+    background: transparent;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 40px;
+}
+
+#NavBar .dropdown:hover mark {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+#NavBar .dropdown-content a {
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#NavBar .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+#NavBar .dropdown-content a:hover {
+    background: #ddd
+}
+
+@media screen and (max-width: 600px) {
+    #NavBar #app-title {
+        font-size: 40px;
+    }
+    
+    #NavBar ul {
+        display: none;
+    }
+    
+    #NavBar nav.dropdown {
+        display: block;
+    }
+}

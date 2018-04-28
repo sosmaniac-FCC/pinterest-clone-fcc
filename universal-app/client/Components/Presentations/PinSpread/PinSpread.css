@@ -1,0 +1,41 @@
+/* PinSpread */
+
+#PinSpread {
+    margin: 0 auto;
+    display: block;
+}
+
+#PinSpread section {
+    display: inline-block;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0 #000;
+}
+
+#PinSpread section .fa-heart:focus {
+    color: #f00;
+}
+
+#PinSpread section span {
+    padding-right: 5px;
+}
+
+#PinSpread section p {
+    text-align: center;
+}
+
+#PinSpread section p:nth-of-type(2) {
+    float: right;
+    margin: 0;
+}
+
+#PinSpread section a {
+    float: right;
+}
+
+#PinSpread section img {
+    max-width: 200px;
+    border-bottom: 1px solid #000;
+}

@@ -1,0 +1,28 @@
+/* UserPins */
+
+#UserPins {
+    background: #b6b6b6;
+    margin-top: 5px;
+    border-radius: 0 0 3px 3px;
+    padding: 10px 0;
+}
+
+#UserPins main {
+    display: block;
+}
+
+#UserPins .empty-message {
+    text-align: center;
+    font-weight: bold;
+}
+
+#UserPins header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#UserPins header button {
+    margin-bottom: 10px;
+}

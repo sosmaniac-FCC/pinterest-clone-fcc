@@ -1,0 +1,922 @@
+/* AllPins */
+
+#AllPins {
+    background: #b6b6b6;
+    margin-top: 5px;
+    border-radius: 0 0 3px 3px;
+    padding: 10px 0;
+}/* App Component */
+
+body {
+    background: #fff;
+}
+
+button a {
+    color: #000;
+    text-decoration: none;
+    height: 100%;
+}
+
+.add-btn-padding {
+      padding: 5px 10px;
+}
+  
+.rm-btn-padding {
+      padding: 0 !important;
+}
+
+.btn-danger {
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #f00;
+    background: transparent;
+}
+
+.btn-danger:hover {
+    background: #f00;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.btn-success {
+    background: #cfc;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #0f0;
+}
+
+.btn-success:hover {
+    background: #0f0;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #39f;
+    background: #9cf;
+}
+
+.btn-primary:hover {
+    background: #cce5ff;
+    color: #000 !important;
+    cursor: pointer;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.notification-danger {
+    background: #c00;
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.notification-success {
+    background: #3c3;
+    border-radius: 3px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.icon-delete {
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-delete:hover {
+    color: #f00;
+}
+
+.icon-primary {
+    color: #800000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-twitter {
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-twitter:hover {
+    color: #739cfe;
+}
+
+.icon-primary:hover {
+    color: #f00;
+}
+
+.form-row {
+    position: relative;
+    background: #b6b6b6;
+    border-radius: 3px;
+    border: 1px solid #000;
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f1f1f1;
+    min-width: 160px;
+    z-index: 2;
+    border: 1px solid #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#App > h6 {
+    display: flex;
+    justify-content: center;
+}/* CreateAccount */
+
+#CreateAccount {
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(10, 1fr);
+    grid-gap: 5px;
+}
+
+#CreateAccount aside:nth-of-type(1) {
+    background: #ebebeb;
+    border-radius: 0 0 0 5px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    grid-column: 1 / 4;
+}
+
+#CreateAccount aside:nth-of-type(2) {
+    background: #ebebeb;
+    border-radius: 0 0 5px 0;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 8 / 11;
+}
+
+#CreateAccount main {
+    background: #ebebeb;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    justify-content: center;
+    grid-column: 4 / 8;
+}
+
+#CreateAccount h1 {
+    text-align: center;
+}
+
+#CreateAccount #account-username-error[for="account-username"], 
+#CreateAccount #account-password-error[for="account-password"],
+#CreateAccount #account-email-error[for="account-email"],
+#CreateAccount #confirm-account-password-error[for="confirm-account-password"] {
+    color: red;
+    position: absolute;
+    pointer-events: none;
+    font-size: 10px;
+    right: 5%;
+    top: 1px;
+}
+
+#CreateAccount .form-row {
+    justify-content: space-between;
+}
+
+#CreateAccount .btn-block {
+    padding-top: 20px;
+}
+
+#CreateAccount .btn-block .btn-danger {
+    background: #f69;
+}
+
+#CreateAccount .btn-block .btn-danger a:hover {
+    color: #fff;
+}
+
+#CreateAccount .form-row {
+    padding: 15px 5px;
+}
+
+#CreateAccount .form-row:nth-of-type(2), #CreateAccount .form-row:nth-of-type(3) {
+    border-radius: 0;
+}
+
+#CreateAccount .form-row:nth-of-type(1) {
+    border-radius: 3px 3px 0 0;
+}
+
+#CreateAccount .form-row:nth-of-type(4) {
+    border-radius: 0 0 3px 3px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #CreateAccount aside:nth-of-type(1) {
+        grid-column: 1 / 3;
+    }
+    
+    #CreateAccount aside:nth-of-type(2) {
+        grid-column: 9 / 11;
+    }
+    
+    #CreateAccount main {
+        grid-column: 3 / 9;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #CreateAccount aside:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+    
+    #CreateAccount aside:nth-of-type(2) {
+        grid-column: 10 / 11;
+    }
+    
+    #CreateAccount main {
+        grid-column: 2 / 10;
+    }
+    
+    #CreateAccount #account-username-error[for="account-username"], 
+    #CreateAccount #account-password-error[for="account-password"],
+    #CreateAccount #account-email-error[for="account-email"],
+    #CreateAccount #confirm-account-password-error[for="confirm-account-password"] {
+        font-size: 12px;
+        top: 18px;
+        right: -55%;
+    }
+    
+    #CreateAccount .form-row {
+        width: auto;
+        flex-wrap: wrap;
+    }
+    
+    #CreateAccount form input {
+        height: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    #CreateAccount form label {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}/* IndexPage */
+
+@-webkit-keyframes fade-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#IndexPage .sub-grid {
+    display: grid;
+    grid-template: auto auto / repeat(12, 1fr);
+    grid-gap: 2px
+}
+
+#IndexPage main {
+    position: relative;
+    background: #efefef;
+    margin-bottom: 5px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+#IndexPage main figcaption {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-family: Verdana;
+    letter-spacing: 0.1em;
+    z-index: 0;
+}
+
+#IndexPage #index-image-scroll {
+    transition: opacity 750ms ease-in-out;
+    display: block;
+    margin: auto;
+    height: 500px;
+    max-width: 1000px;
+    opacity: 0;
+    -webkit-animation: fade-appear 750ms ease-in-out;
+            animation: fade-appear 750ms ease-in-out;
+    -webkit-animation-fill-mode: towards;
+            animation-fill-mode: towards;
+    position: relative;
+    z-index: 1;
+}
+
+#IndexPage .sub-grid > .grid-item-a {
+    width: 100%;
+    grid-column: 1 / 7;
+}
+
+#IndexPage .sub-grid > .grid-item-b {
+    width: 100%;
+    grid-column: 7 / 13;
+}
+
+#IndexPage .sub-grid > .grid-item-ab {
+    width: 100%;
+    grid-column: 1 / 13;
+}
+
+#IndexPage .info-main {
+    background: linear-gradient(#fff, #a6a6a6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    outline: 1px solid #b7b7b7;
+}
+
+#IndexPage .info-main h3 {
+    font-size: 75px;
+    margin: 10px 25px;
+}
+
+#IndexPage .info-main p {
+    text-align: center;
+    font-family: Verdana;
+    padding: 0 25px 25px 25px;
+    line-height: 1.5em;
+}
+
+#IndexPage .info-spread {
+    background: #b6b6b6;
+    padding: 10px 0;
+}
+
+#IndexPage .info-spread .spread-header {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+#IndexPage .info-footer {
+    display: flex;
+    justify-content: center;
+    background-color: #a6a6a6;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #000;
+    margin-top: 2px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #IndexPage #index-image-scroll {
+        height: 375px;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #IndexPage #index-image-scroll { 
+        height: 250px;
+    }
+    
+    #IndexPage .sub-grid > .grid-item-a {
+        background: #e6e6e6;
+        grid-column: 1 / 13;
+    }
+    
+    #IndexPage .sub-grid > .grid-item-b {
+        background: linear-gradient(#e6e6e6, #a6a6a6);
+        grid-column: 1 / 13;
+    }
+}/* LoginPage */
+
+#LoginPage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #ebebeb;
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 25px;
+}
+
+#LoginPage form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#LoginPage aside i {
+    font-size: 150px;
+}
+
+#LoginPage .valid {
+    color: green;
+}
+
+/* .invalid omitted */
+
+#LoginPage #login-username-error[for="login-username"], #LoginPage #login-password-error[for="login-password"] {
+    color: red;
+    position: absolute;
+    right: 7.5%;
+}
+
+#LoginPage .form-row {
+    padding: 10px 0;
+}
+
+#LoginPage form a {
+    padding-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+#LoginPage form a:hover {
+    text-decoration: underline;
+    color: #4646e4;
+}
+
+#LoginPage form button[type="submit"] {
+    display: block;
+    margin: auto;
+}
+
+
+#LoginPage form button[type="button"] {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    #LoginPage aside i {
+         font-size: 75px;   
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #LoginPage aside i {
+         display: none;   
+    }
+}/* NavBar */
+
+#NavBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid #000;
+    margin-bottom: 4px;
+    background: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 0;
+}
+
+#NavBar nav {
+    display: none;
+}
+
+#NavBar ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+}
+
+#NavBar li {
+    color: #000;
+    padding: 8px;
+    display: inline;
+    text-decoration: none;
+}
+
+#NavBar #app-title {
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    margin: 0;
+}
+
+#NavBar li a {
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #000;
+    background: #ccc;
+    cursor: pointer;
+}
+
+#NavBar li a:hover, .active-nav-option {
+    background-color: #555 !important;
+    color: #fff !important;
+}
+
+#NavBar .dropdown {
+    padding-left: 20px;
+    display: none;
+}
+
+#NavBar .dropdown mark {
+    background: transparent;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 40px;
+}
+
+#NavBar .dropdown:hover mark {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+#NavBar .dropdown-content a {
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#NavBar .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+#NavBar .dropdown-content a:hover {
+    background: #ddd
+}
+
+@media screen and (max-width: 600px) {
+    #NavBar #app-title {
+        font-size: 40px;
+    }
+    
+    #NavBar ul {
+        display: none;
+    }
+    
+    #NavBar nav.dropdown {
+        display: block;
+    }
+}/* UserPins */
+
+#UserPins {
+    background: #b6b6b6;
+    margin-top: 5px;
+    border-radius: 0 0 3px 3px;
+    padding: 10px 0;
+}
+
+#UserPins main {
+    display: block;
+}
+
+#UserPins .empty-message {
+    text-align: center;
+    font-weight: bold;
+}
+
+#UserPins header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#UserPins header button {
+    margin-bottom: 10px;
+}
+/* Alert */
+
+#Alert {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* bookmark */
+#Alert main {
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+}/* NotFound */
+
+#NotFound h1 {
+    text-align: center;
+    margin: 100px auto;
+}/* PinModal */
+
+#PinModal {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.50s;
+    transition-timing-function: linear;
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.4);
+    overflow: auto;
+    z-index: 1;
+}
+
+#PinModal section {
+    display: flex;
+    justify-content: center;
+    position: relative; 
+    top: -800px;
+}
+
+#PinModal .valid {
+    color: green;
+}
+
+#PinModal #pin-title-error[for="pin-title"],
+#PinModal #pin-url-error[for="pin-url"] {
+    color: red;
+    right: 25%;
+    position: absolute;
+}
+
+#PinModal section form {
+    background: #000;
+    border-radius: 5px;
+    padding: 0 40px 10px 40px;
+}
+
+#PinModal form img {
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+}
+
+#PinModal form .form-row:nth-of-type(1) {
+    border-radius: 3px 3px 0 0;
+}
+
+#PinModal form .form-row:nth-of-type(2) {
+    border-radius: 0 0 3px 3px;
+}
+
+#PinModal form .form-row {
+    display: block;
+    margin: 0 auto;
+}
+
+#PinModal form input {
+    margin-left: 10px;
+    width: 200px;
+}
+
+#PinModal .btn-block {
+    padding-top: 10px;
+}
+
+#PinModal .btn-block .btn-success {
+    color: #0f0;
+    background: transparent;
+}
+
+#PinModal .btn-block .btn-danger {
+    color: #f00;
+}
+
+@-webkit-keyframes shiftIn {
+    from {
+        top: -800px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes shiftIn {
+    from {
+        top: -800px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@-webkit-keyframes shiftOut {
+    from {
+        top: 50px;
+    }
+    to {
+        top: -800px;
+    }
+}
+
+@keyframes shiftOut {
+    from {
+        top: 50px;
+    }
+    to {
+        top: -800px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* ... */
+}
+
+@media screen and (max-width: 600px) {
+    #PinModal form img {
+        height: 300px;
+        width: 300px;
+    }
+}/* PinSpread */
+
+#PinSpread {
+    margin: 0 auto;
+    display: block;
+}
+
+#PinSpread section {
+    display: inline-block;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0 #000;
+}
+
+#PinSpread section .fa-heart:focus {
+    color: #f00;
+}
+
+#PinSpread section span {
+    padding-right: 5px;
+}
+
+#PinSpread section p {
+    text-align: center;
+}
+
+#PinSpread section p:nth-of-type(2) {
+    float: right;
+    margin: 0;
+}
+
+#PinSpread section a {
+    float: right;
+}
+
+#PinSpread section img {
+    max-width: 200px;
+    border-bottom: 1px solid #000;
+}/* Preloader */
+
+#Preloader {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#Preloader .circle-outer {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #8000ff; 
+}
+
+#Preloader .circle-inner {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff; 
+}
+
+#Preloader .circle-inner-primary {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+#Preloader .circle-inner-secondary {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #55ff55;
+}
+
+#Preloader .center-slice-primary {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    top: -5px;
+    left: -5px;
+    border-radius: 100% 0 0 0;
+    background: #fff;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-animation: spin 0.50s linear 0s infinite;
+            animation: spin 0.50s linear 0s infinite;
+}
+
+#Preloader .center-slice-secondary {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 5px;
+    left: 5px;
+    border-radius: 100% 0 0 0;
+    background: #fff;
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    animation: spin 0.50s linear 0s infinite reverse;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
